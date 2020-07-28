@@ -5,7 +5,7 @@ In this paper we will discuss about the main security vulnerabilities found in [
 
 ## Main vulnerabilities
 
-### 1. XFF bypass in [faw.php](https://github.com/GiacomoDevIT/GjacBot-SQL/blob/master/waf.php)
+### 1. XFF bypass in [waf.php](https://github.com/GiacomoDevIT/GjacBot-SQL/blob/master/waf.php)
 
 One of the biggest issues that we found during our review is this quite easy bypassable Firewall:
 you only need to change the ```X-Forwarded-For``` Header value in the HTTP-Request to one of the accepted IP addresses in order to bypass this firewall.
