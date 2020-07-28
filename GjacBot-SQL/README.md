@@ -38,8 +38,8 @@ Although its shortness, this file is full of distructive bugs and vulns:
 
 The first ```if``` statement checks if the Telegram Bot API Token is sent and, if present, it's used as the bot token. This bug leads to two different options:
 
-    - Pass an empty token, which will crash the bot;
-    - Pass a malicious token, in order to redirect all the messages to a different bot (making the original one useless).
+- Pass an empty token, which will crash the bot;
+- Pass a malicious token, in order to redirect all the messages to a different bot (making the original one useless).
 
 ## Authors
 
