@@ -10,7 +10,7 @@ In this paper we will discuss about the main security vulnerabilities found in [
 One of the biggest issues that we found during our review is this quite easy bypassable Firewall:
 you only need to change the ```X-Forwarded-For``` Header value in the HTTP-Request to one of the accepted IP addresses in order to bypass this firewall.
 
-### 2. SQL Injection in [funzioni.php](https://github.com/GiacomoDevIT/GjacBot-SQL/blob/master/funzioni.php#L57)
+### 2. SQL Injection in [funzioni.php](https://github.com/GiacomoDevIT/GjacBot-SQL/blob/master/funzioni.php#L62)
 
 Another very big issue found in this project is the multitude of potential SQL Injections found:
 whenever ```$chat_id``` is used, there is a possible SQLi, due to the fact that it's always possible to change it in the fake request body, allowing us to drop tables, overwrite data and so on.
