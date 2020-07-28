@@ -10,7 +10,7 @@ In this paper we will discuss about the main security vulnerabilities found in [
 One of the biggest issues that we found during our review is this quite easy bypassable Firewall:
 you only need to change the ```X-Forwarded-For``` Header value in the HTTP-Request to one of the accepted IP addresses in order to bypass this firewall.
 ```
-GET /bot/bot.php?api=[] HTTP/1.1
+GET /path/to/bot.php?api=[] HTTP/1.1
 Host: localhost:80
 X-Forwarded-For: 149.154.160.0
 Content-Type: application/json
