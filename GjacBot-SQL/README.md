@@ -42,7 +42,7 @@ whenever ```$chat_id``` is used, there is a possible SQLi, due to the fact that 
 
 ### 3. Deadly Get Param Check in [bot.php](https://github.com/GiacomoDevIT/GjacBot-SQL/blob/master/bot.php)
 
-Although its shortness, this file is full of distructive bugs and vulns:
+Although its shortness, this file is full of destructive bugs and vulnerabilities:
 
 The first ```if``` statement checks if the Telegram Bot API Token is sent and, if present, it's used as the bot token. This bug leads to two different options:
 
